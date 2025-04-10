@@ -40,5 +40,13 @@ export class AuthService {
       return null;
     }
   }
+  forgotPassword(email: string): Observable<any> {
+    const url = `http://localhost:9090/api/auth/forgot-password?email=${encodeURIComponent(email)}`;
+    return this.http.post(url, {}); // Post sans body, juste pour respecter Swagger
+  }
+  resetPassword(token: string, newPassword: string): Observable<any> {
+    const url = `http://localhost:9090/api/auth/reset-password?token=${encodeURIComponent(token)}&newPassword=${encodeURIComponent(newPassword)}`;
+    return this.http.post(url, {}); // 👈 POST sans body
+  }
 }
 

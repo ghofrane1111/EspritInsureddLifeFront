@@ -19,9 +19,10 @@
                     />
                   </div>
                   
-                <div class="forgot-pass">
-                    <a href="#">Forgot your password?</a>
-                </div>
+                  <div class="forgot-pass">
+                    <a [routerLink]="'/forgot-password'">Forgot your password?</a>
+                  </div>
+                  
                 
                 <button type="button" class="btn" (click)="onLogin()" >Login</button>
                 <div class="google-login">

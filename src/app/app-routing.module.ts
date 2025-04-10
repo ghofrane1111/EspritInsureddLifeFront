@@ -3,7 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './component/User/login/login.component';
 import { FullComponent } from './layouts/full/full.component';
 import { SignupComponent } from './component/User/signup/signup.component';
-
+import { OAuth2RedirectComponent } from './component/User/oauth2-redirect/oauth2-redirect.component';
+import { ForgotpasswordComponent } from './component/User/forgotpassword/forgotpassword.component';
+import { ResetpasswordComponent } from './component/User/resetpassword/resetpassword.component';
 
 export const Approutes: Routes = [
   {
@@ -15,7 +17,7 @@ export const Approutes: Routes = [
     path: 'login',
     component: LoginComponent
   },
-  { path: 'signup', component: SignupComponent } ,
+  { path: 'signup', component: SignupComponent },
   {
     path: '',
     component: FullComponent,
@@ -34,8 +36,14 @@ export const Approutes: Routes = [
       }
     ]
   },
+  { path: 'oauth2/redirect', component: OAuth2RedirectComponent }, // <-- Cette ligne doit être avant le wildcard '**'
+  { path: 'forgot-password', component: ForgotpasswordComponent },
+  
+  // Route pour réinitialisation du mot de passe
+  { path: 'reset-password', component: ResetpasswordComponent },
   {
     path: '**',
     redirectTo: 'login'
   }
+  
 ];

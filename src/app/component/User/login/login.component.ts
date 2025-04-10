@@ -48,6 +48,14 @@ export class LoginComponent {
       }
     );
   }
+  ngOnInit(): void {
+    const googleLoginBtn = document.querySelector('.google-btn');
+    if (googleLoginBtn) {
+      googleLoginBtn.addEventListener('click', () => {
+        window.location.href = 'http://localhost:9090/oauth2/authorization/google';
+      });
+    }
   
   
+}
 }

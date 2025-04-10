@@ -14,6 +14,9 @@ import { CardsComponent } from './ComplaintManagement/complaint.component';
 import { TableComponent } from "./User/User.component";
 import { LoginComponent } from './User/login/login.component';
 import { SignupComponent } from './User/signup/signup.component';
+import { OAuth2RedirectComponent } from './User/oauth2-redirect/oauth2-redirect.component';
+import { ForgotpasswordComponent } from './User/forgotpassword/forgotpassword.component';
+import { ResetpasswordComponent } from './User/resetpassword/resetpassword.component';
 
 @NgModule({
   imports: [
@@ -32,7 +35,10 @@ import { SignupComponent } from './User/signup/signup.component';
   ],
   declarations: [
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    OAuth2RedirectComponent,
+    ForgotpasswordComponent,
+    ResetpasswordComponent
   ],
 })
 export class ComponentsModule { }
