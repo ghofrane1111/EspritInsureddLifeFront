@@ -7,7 +7,7 @@ import { NgFor } from '@angular/common';
   selector: 'app-table',
   standalone: true,
   imports:[NgFor],
-  templateUrl: 'table.component.html'
+  templateUrl: 'User.component.html'
 })
 export class TableComponent {
   topSelling: Product[];

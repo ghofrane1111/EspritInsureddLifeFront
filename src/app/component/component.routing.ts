@@ -7,7 +7,7 @@ import { NgbdnavBasicComponent } from './nav/nav.component';
 import { BadgeComponent } from './Loan Management/LoanManagement.component';
 import { NgbdButtonsComponent } from './ContractManagement/ContractManagement.component';
 import { CardsComponent } from './ComplaintManagement/complaint.component';
-import { TableComponent } from './table/table.component';
+import { TableComponent } from './User/User.component';
 
 
 export const ComponentsRoutes: Routes = [
