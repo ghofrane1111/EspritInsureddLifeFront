@@ -68,7 +68,7 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '/component/table',
-    title: 'Table',
+    title: 'User',
     icon: 'bi bi-layout-split',
     class: '',
     extralink: false,
