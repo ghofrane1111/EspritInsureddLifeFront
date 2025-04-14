@@ -1,5 +1,7 @@
 import { Component, AfterViewInit, EventEmitter, Output } from '@angular/core';
 import { NgbDropdownModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
+
 
 declare var $: any;
 
@@ -14,7 +16,7 @@ export class NavigationComponent implements AfterViewInit {
 
   public showSearch = false;
 
-  constructor(private modalService: NgbModal) {
+  constructor(private modalService: NgbModal, private router: Router) {
   }
 
   // This is for Notifications
@@ -111,4 +113,7 @@ export class NavigationComponent implements AfterViewInit {
   }]
 
   ngAfterViewInit() { }
+  goToProfile() {
+    this.router.navigate(['/user-profile']);
+  }
 }

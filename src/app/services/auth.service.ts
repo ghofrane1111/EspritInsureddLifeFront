@@ -48,5 +48,43 @@ export class AuthService {
     const url = `http://localhost:9090/api/auth/reset-password?token=${encodeURIComponent(token)}&newPassword=${encodeURIComponent(newPassword)}`;
     return this.http.post(url, {}); // 👈 POST sans body
   }
+  getUserProfile() {
+    const token = this.getToken();
+    console.log('TOKEN:', token); // <-- Ajoute ceci
+    return this.http.get('http://localhost:9090/api/users/profile', {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+  }
+  deleteAccount(id: number) {
+    const token = this.getToken(); // Récupère le token
+    const headers = {
+      'Authorization': `Bearer ${token}`
+    };
+  
+    return this.http.delete('http://localhost:9090/api/users/' + id, { headers, responseType: 'text' });
+  }
+  updateUser(id: number, data: any): Observable<any> {
+    const token = this.getToken(); // Récupère le token JWT
+    const headers = {
+      'Authorization': `Bearer ${token}`
+    };
+  
+    return this.http.put(`http://localhost:9090/api/users/${id}`, data, { headers });
+  }
+  updatePhoto(id: number, formData: FormData): Observable<any> {
+    const token = this.getToken();
+    return this.http.put(`http://localhost:9090/api/users/${id}/photo`, formData, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+  }
+
+
+  
+  
+  
 }
 

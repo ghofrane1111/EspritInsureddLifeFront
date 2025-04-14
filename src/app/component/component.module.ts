@@ -17,6 +17,7 @@ import { SignupComponent } from './User/signup/signup.component';
 import { OAuth2RedirectComponent } from './User/oauth2-redirect/oauth2-redirect.component';
 import { ForgotpasswordComponent } from './User/forgotpassword/forgotpassword.component';
 import { ResetpasswordComponent } from './User/resetpassword/resetpassword.component';
+import { UserProfileComponent } from './User/user-profile/user-profile.component';
 
 @NgModule({
   imports: [
@@ -38,7 +39,8 @@ import { ResetpasswordComponent } from './User/resetpassword/resetpassword.compo
     SignupComponent,
     OAuth2RedirectComponent,
     ForgotpasswordComponent,
-    ResetpasswordComponent
+    ResetpasswordComponent,
+    UserProfileComponent
   ],
 })
 export class ComponentsModule { }

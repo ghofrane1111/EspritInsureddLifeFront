@@ -6,6 +6,7 @@ import { SignupComponent } from './component/User/signup/signup.component';
 import { OAuth2RedirectComponent } from './component/User/oauth2-redirect/oauth2-redirect.component';
 import { ForgotpasswordComponent } from './component/User/forgotpassword/forgotpassword.component';
 import { ResetpasswordComponent } from './component/User/resetpassword/resetpassword.component';
+import { UserProfileComponent } from './component/User/user-profile/user-profile.component';
 
 export const Approutes: Routes = [
   {
@@ -18,6 +19,7 @@ export const Approutes: Routes = [
     component: LoginComponent
   },
   { path: 'signup', component: SignupComponent },
+  
   {
     path: '',
     component: FullComponent,
@@ -33,8 +35,15 @@ export const Approutes: Routes = [
       {
         path: 'component',
         loadChildren: () => import('./component/component.module').then(m => m.ComponentsModule)
+      },
+      {
+        path: 'user-profile',
+        component: UserProfileComponent
       }
+      
+      
     ]
+    
   },
   { path: 'oauth2/redirect', component: OAuth2RedirectComponent }, // <-- Cette ligne doit être avant le wildcard '**'
   { path: 'forgot-password', component: ForgotpasswordComponent },
