@@ -18,6 +18,7 @@ import { OAuth2RedirectComponent } from './User/oauth2-redirect/oauth2-redirect.
 import { ForgotpasswordComponent } from './User/forgotpassword/forgotpassword.component';
 import { ResetpasswordComponent } from './User/resetpassword/resetpassword.component';
 import { UserProfileComponent } from './User/user-profile/user-profile.component';
+import { QrLoginComponent } from './User/qr-login/qr-login.component';
 
 @NgModule({
   imports: [
@@ -40,7 +41,8 @@ import { UserProfileComponent } from './User/user-profile/user-profile.component
     OAuth2RedirectComponent,
     ForgotpasswordComponent,
     ResetpasswordComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    QrLoginComponent
   ],
 })
 export class ComponentsModule { }

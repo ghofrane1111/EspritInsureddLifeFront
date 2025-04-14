@@ -7,6 +7,7 @@ import { OAuth2RedirectComponent } from './component/User/oauth2-redirect/oauth2
 import { ForgotpasswordComponent } from './component/User/forgotpassword/forgotpassword.component';
 import { ResetpasswordComponent } from './component/User/resetpassword/resetpassword.component';
 import { UserProfileComponent } from './component/User/user-profile/user-profile.component';
+import { QrLoginComponent } from './component/User/qr-login/qr-login.component';
 
 export const Approutes: Routes = [
   {
@@ -19,6 +20,7 @@ export const Approutes: Routes = [
     component: LoginComponent
   },
   { path: 'signup', component: SignupComponent },
+  { path: 'qr-login', component: QrLoginComponent },
   
   {
     path: '',
